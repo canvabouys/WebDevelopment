@@ -10,6 +10,7 @@
         "jprestidge.theme-material-theme",
         "yandeu.five-server",
         "pkief.material-icon-theme",
+        "kingleo.unzip",
     ],
     "postCreateCommand": "npm install"
   }
