@@ -1,6 +1,5 @@
 {
-    "name": "Auto-Commit Codespace",
-    "runArgs": ["--init"],
-    "postStartCommand": "bash auto_commit.sh"
-  }
-  
+  "name": "Auto-Commit Codespace",
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
+  "postStartCommand": "bash auto_commit.sh"
+}
