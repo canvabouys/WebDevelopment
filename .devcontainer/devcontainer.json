@@ -9,6 +9,7 @@
         "github.vscode-pull-request-github",
         "jprestidge.theme-material-theme",
         "yandeu.five-server",
+        "pkief.material-icon-theme",
     ],
     "postCreateCommand": "npm install"
   }
