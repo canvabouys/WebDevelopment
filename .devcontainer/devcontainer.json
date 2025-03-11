@@ -3,11 +3,12 @@
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {},
     "extensions": [
-      "ms-python.python",
-      "esbenp.prettier-vscode",
-      "dbaeumer.vscode-eslint",
-      "ms-azuretools.vscode-docker",
-      "ms-vscode-remote.remote-containers"
+        "atommaterial.a-file-icon-vscode",
+        "github.codespaces",
+        "github.github-vscode-theme",
+        "github.vscode-pull-request-github",
+        "jprestidge.theme-material-theme",
+        "yandeu.five-server",
     ],
     "postCreateCommand": "npm install"
   }
