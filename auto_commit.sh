@@ -1,8 +1,9 @@
 #!/bin/bash
 
 while true; do
-  # Check for changes before committing
+  # Check if there are any changes (tracked or untracked)
   if [ -n "$(git status --porcelain)" ]; then
+    echo "🔄 Changes detected. Committing..."
     git add -A
     git commit -m "Auto-commit: $(date)"
 
