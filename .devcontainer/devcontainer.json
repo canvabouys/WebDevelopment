@@ -11,6 +11,7 @@
         "yandeu.five-server",
         "pkief.material-icon-theme",
         "kingleo.unzip",
+        "ms-vscode.live-server",
     ],
     "postCreateCommand": "npm install"
   }
