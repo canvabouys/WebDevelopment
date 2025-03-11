@@ -1,0 +1,6 @@
+{
+    "name": "Auto-Commit Codespace",
+    "runArgs": ["--init"],
+    "postStartCommand": "bash auto_commit.sh"
+  }
+  
