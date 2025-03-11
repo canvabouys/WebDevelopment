@@ -1,19 +1,24 @@
 #!/bin/bash
 
 while true; do
-  git add -A
-  git commit -m "Auto-commit: $(date)"
-  
-  # Pull the latest changes with rebase to avoid conflicts
-  git pull --rebase origin main  # Change 'main' to your branch name if different
+  # Check for changes before committing
+  if [ -n "$(git status --porcelain)" ]; then
+    git add -A
+    git commit -m "Auto-commit: $(date)"
 
-  # Push the changes
-  if git push origin main; then
-    echo "✅ Changes pushed successfully."
+    # Pull latest changes with rebase to avoid conflicts
+    git pull --rebase origin main  # Change 'main' to your branch name if different
+
+    # Push the changes
+    if git push origin main; then
+      echo "✅ Changes pushed successfully."
+    else
+      echo "❌ Push failed. Retrying after conflict resolution..."
+      git pull --rebase origin main  # Resolve any conflicts and retry
+    fi
   else
-    echo "❌ Push failed. Retrying after conflict resolution..."
-    git pull --rebase origin main  # Resolve any conflicts and retry
+    echo "⚠️ No changes to commit."
   fi
 
-  sleep 60  # Commit every 5 seconds
+  sleep 5  # Commit every 5 seconds
 done
