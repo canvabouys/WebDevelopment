@@ -15,5 +15,5 @@ while true; do
     git pull --rebase origin main  # Resolve any conflicts and retry
   fi
 
-  sleep 60  # Commit every 5 seconds
+  sleep 10  # Commit every 5 seconds
 done
