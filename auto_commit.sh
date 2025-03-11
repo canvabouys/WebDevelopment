@@ -7,15 +7,16 @@ while true; do
     git add -A
     git commit -m "Auto-commit: $(date)"
 
-    # Pull latest changes with rebase to avoid conflicts
+    # Set up Git to push directly (force update the branch reference)
     git pull --rebase origin main  # Change 'main' to your branch name if different
 
-    # Push the changes
-    if git push origin main; then
+    # Push the changes forcefully to ensure it updates the remote
+    if git push origin main --force; then
       echo "✅ Changes pushed successfully."
     else
       echo "❌ Push failed. Retrying after conflict resolution..."
       git pull --rebase origin main  # Resolve any conflicts and retry
+      git push origin main --force
     fi
   else
     echo "⚠️ No changes to commit."
