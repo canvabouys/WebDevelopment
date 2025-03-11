@@ -1,0 +1,13 @@
+{
+    "name": "My Codespace",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {},
+    "extensions": [
+      "ms-python.python",
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      "ms-azuretools.vscode-docker",
+      "ms-vscode-remote.remote-containers"
+    ],
+    "postCreateCommand": "npm install"
+  }
