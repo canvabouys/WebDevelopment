@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+}
+
+#hero-section {
+    background-color: rgb(223, 255, 244);
+    height: 80vh;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.container-1 {
+    display: block;
+    width: 50%;
+    float: right;
+    padding: 20px;
+}
+
+.name-container {
+    display: inline-block;
+    width: 50%;
+    justify-content: center;
+}
+
+.my-name {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: block;
+    font-size: 3rem;
+    justify-content: center;
+    clear: both;
+}
